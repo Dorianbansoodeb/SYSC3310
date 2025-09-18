@@ -7,16 +7,19 @@ public class AddressBook {
         this.buddies = new ArrayList<>();
     }
 
-    public void adBuddy(BuddyInfo buddy) {
+    public void addBuddy(BuddyInfo buddy) {
         this.buddies.add(buddy);
     }
 
-    public void removeBuddy(int index){
-        this.buddies.remove(index);
+    public void removeBuddy(BuddyInfo buddy){
+        this.buddies.remove(buddy);
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        BuddyInfo buddy = new BuddyInfo("Tom","Carleton","613");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
     }
 
 
