@@ -15,6 +15,7 @@ public class AddressBook {
     public void buddyNum(){
         for (BuddyInfo buddy : this.buddies) {
             System.out.println(buddy);
+            //test
         }
     }
 
