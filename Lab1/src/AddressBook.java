@@ -12,15 +12,24 @@ public class AddressBook {
         this.buddies.add(buddy);
     }
 
-    public void removeBuddy(BuddyInfo buddy){
-        this.buddies.remove(buddy);
+    public void buddyNum(){
+        for (BuddyInfo buddy : this.buddies) {
+            System.out.println(buddy);
+        }
     }
+
+    public BuddyInfo removeBuddy(int index){
+        if(index>=0 && index<buddies.size()){
+            return buddies.remove(index);
+        }
+        return null;
+     }
 
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("Tom","Carleton","613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
+        addressBook.removeBuddy(0);
     }
 
 
